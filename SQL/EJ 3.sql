@@ -1,0 +1,1 @@
+SELECT prod_codigo, prod_detalle, SUM(stoc_cantidad) FROM Producto JOIN STOCK ON stoc_producto = prod_codigo GROUP BY prod_codigo, prod_detalle ORDER BY prod_detalle DESC

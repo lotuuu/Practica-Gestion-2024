@@ -1,0 +1,1 @@
+SELECT prod_codigo, prod_detalle, SUM(item_cantidad)  AS total_cantidad FROM Producto JOIN Item_Factura ON	prod_codigo = item_producto JOIN Factura on item_tipo = fact_tipo and item_sucursal = fact_sucursal and item_numero = fact_numero WHERE YEAR(fact_fecha) = 2012 GROUP BY prod_codigo, prod_detalle ORDER BY prod_codigo;
